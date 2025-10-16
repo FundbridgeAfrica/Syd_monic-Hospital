@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syd_monic Hospital - Compassionate Family Care in Lagos</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles & Tailwind Config -->
+    <style>
+        /* Define custom font families */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Custom scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom styles for accent button */
+        .btn-accent {
+            background-color: #F27A54; /* Warm Coral */
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        .btn-accent:hover {
+            background-color: #e06841;
+        }
+        /* Custom styling for the hero background */
+        .hero-bg {
+            background-color: #2C7A8A; /* Primary Teal Color */
+        }
+        /* Animation for sections on scroll */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header id="header" class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-teal-700">Syd_monic Hospital</a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="text-gray-600 hover:text-teal-700">Home</a>
+                <a href="#about" class="text-gray-600 hover:text-teal-700">About Us</a>
+                <a href="#services" class="text-gray-600 hover:text-teal-700">Services</a>
+                <a href="#contact" class="text-gray-600 hover:text-teal-700">Contact</a>
+                <a href="#" id="book-appointment-btn-desktop" class="btn-accent rounded-full px-6 py-2 font-semibold">Book Appointment</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#home" class="block text-gray-600 hover:text-teal-700">Home</a>
+            <a href="#about" class="block text-gray-600 hover:text-teal-700">About Us</a>
+            <a href="#services" class="block text-gray-600 hover:text-teal-700">Services</a>
+            <a href="#contact" class="block text-gray-600 hover:text-teal-700">Contact</a>
+            <a href="#" id="book-appointment-btn-mobile" class="mt-2 block text-center w-full btn-accent rounded-full px-6 py-2 font-semibold">Book Appointment</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-bg text-white py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Your Health. Our Family.</h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">
+                    Syd_monic Hospital offers compassionate, patient-first healthcare for every member of your family, right here in the heart of Lagos.
+                </p>
+                <a href="#" id="book-appointment-btn-hero" class="btn-accent rounded-full px-10 py-4 text-lg font-bold">Book Your Appointment</a>
+            </div>
+        </section>
+
+        <!-- About Us Snapshot -->
+        <section id="about" class="py-16 md:py-24 bg-white fade-in-section">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-teal-800 mb-4">A Partner in Your Family's Wellness Journey</h2>
+                <div class="w-24 h-1 bg-orange-400 mx-auto mb-8"></div>
+                <p class="max-w-3xl mx-auto text-gray-600 text-lg">
+                    Welcome to Syd_monic Hospital, where we believe great healthcare is built on relationships. We're more than just a clinic; we're a dedicated part of the community, committed to providing the personal, comprehensive care you and your loved ones deserve. Your family's health is our highest priority.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-16 md:py-24 fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-teal-800">Care Tailored For You</h2>
+                    <p class="text-gray-600 mt-2">Comprehensive services to keep you and your family healthy.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <!-- Service 1: Family Medicine -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                        <div class="bg-teal-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-12 h-12 text-teal-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Family Medicine</h3>
+                        <p class="text-gray-600">Continuous and complete care for individuals and families across all ages and life stages.</p>
+                    </div>
+                    <!-- Service 2: Preventive Care -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                        <div class="bg-green-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-12 h-12 text-green-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Preventive Care</h3>
+                        <p class="text-gray-600">Proactive wellness checks and health screenings to help you stay healthy and prevent illness.</p>
+                    </div>
+                    <!-- Service 3: Chronic Disease Management -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                        <div class="bg-orange-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                             <svg class="w-12 h-12 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Chronic Disease Mgmt</h3>
+                        <p class="text-gray-600">Personalised support for managing conditions like diabetes and hypertension effectively.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="py-16 md:py-24 bg-teal-700 text-white fade-in-section">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-8">What Our Patients Say</h2>
+                <div class="max-w-3xl mx-auto">
+                    <p class="text-xl italic mb-4">"The care I received at Syd_monic Hospital was exceptional. The doctor was attentive, and the staff were incredibly welcoming. It truly feels like a family clinic."</p>
+                    <p class="font-semibold text-teal-200">- A. Adebayo</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- About Column -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Syd_monic Hospital</h3>
+                    <p class="text-gray-400">Your trusted partner in family healthcare, serving the Lagos community with dedication and compassion.</p>
+                </div>
+
+                <!-- Contact Info Column -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Information</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start">
+                           <svg class="w-5 h-5 mr-3 mt-1 text-orange-400 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg>
+                           <span>Lagos, Nigeria</span>
+                        </li>
+                        <li class="flex items-start">
+                           <svg class="w-5 h-5 mr-3 mt-1 text-orange-400 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg>
+                           <span>08103453014</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-3 mt-1 text-orange-400 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.162V6a2 2 0 00-2-2H3z" /><path d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z" /></svg>
+                           <span>Syd_monichospital@yahoo.com</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Operating Hours -->
+                <div>
+                     <h3 class="text-xl font-bold mb-4">Operating Hours</h3>
+                     <ul class="space-y-2 text-gray-300">
+                        <li><span class="font-semibold">Mon - Fri:</span> 8:00 AM - 6:00 PM</li>
+                        <li><span class="font-semibold">Saturday:</span> 9:00 AM - 1:00 PM</li>
+                        <li><span class="font-semibold">Sunday:</span> Closed</li>
+                     </ul>
+                </div>
+
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
+                <p>&copy; <span id="currentYear"></span> Syd_monic Hospital. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Modal for Appointment Confirmation -->
+    <div id="appointment-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white rounded-lg p-8 m-4 max-w-sm w-full text-center shadow-2xl">
+            <h3 class="text-2xl font-bold text-teal-700 mb-4">Thank You!</h3>
+            <p class="text-gray-600 mb-6">Our team will contact you shortly to confirm your appointment details. For urgent matters, please call us directly.</p>
+            <button id="close-modal-btn" class="btn-accent rounded-full px-8 py-2 font-semibold">Close</button>
+        </div>
+    </div>
+
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when a link is clicked
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Modal Logic
+            const modal = document.getElementById('appointment-modal');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            const appointmentBtns = [
+                document.getElementById('book-appointment-btn-desktop'),
+                document.getElementById('book-appointment-btn-mobile'),
+                document.getElementById('book-appointment-btn-hero')
+            ];
+
+            function openModal(e) {
+                e.preventDefault();
+                modal.classList.remove('hidden');
+            }
+
+            function closeModal() {
+                modal.classList.add('hidden');
+            }
+
+            appointmentBtns.forEach(btn => btn.addEventListener('click', openModal));
+            closeModalBtn.addEventListener('click', closeModal);
+            
+            // Close modal by clicking outside
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeModal();
+                }
+            });
+
+            // Intersection Observer for animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            const sections = document.querySelectorAll('.fade-in-section');
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
+
+
